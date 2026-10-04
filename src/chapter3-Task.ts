@@ -13,6 +13,8 @@ console.log("Fare (Rs.):", fare);
 fare = fare -100;
 console.log("Fare after coupon rs:", fare);
 */
+
+//Task 1. EASY Create variables for your name, your city, your age and whether you have a laptop. Use thecorrect types and print each one with a label.
 {
 const Name : String = "Aarthi";
 const city : String = "Chennai";
