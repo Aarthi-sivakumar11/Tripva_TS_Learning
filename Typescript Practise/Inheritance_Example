@@ -1,0 +1,51 @@
+class BasePage //This is the parent class. It contains common page actions.
+{    
+    constructor(
+        protected readonly pageName: string,       //We store the page name and path. protected means child classes can access them. readonly means they cannot be reassigned after initialization.
+        protected readonly path: string
+    ) {}
+
+    open(): void {     //it print the page url
+        console.log( `Opening ${this.pageName} at https://tripva.in${this.path}` );
+    }
+
+    protected log(message: string): void {    //create a log method. It prints a message with the current page name.
+        console.log(`[${this.pageName}] ${message}`);
+    }
+}
+
+class LoginPage extends BasePage    // //LoginPage inherits the common methods from BasePage. 
+{    
+    constructor() {
+        super("LoginPage", "/login");    // call the parent constructor
+    }
+
+    login(email: string, password: string): void {  //It prints the login steps. 
+        this.log(`Typing email ${email}`);
+        this.log(`Typing password ${"*".repeat(password.length)}`);   //"*".repeat(password.length) If the password has eight characters, it prints eight stars.
+        this.log("Clicking Login");
+    }
+}
+
+
+class SearchPage extends BasePage     //SearchPage also extends BasePage. So it can reuse open() and log().
+{
+    constructor() {
+        super("SearchPage", "/");
+    }
+
+    search(from: string, to: string): void 
+    {
+        this.log(`Searching buses from ${from} to ${to}`);
+    }
+}
+
+
+//Create objects and execute methods.
+const loginPage = new LoginPage();    
+loginPage.open();
+loginPage.login("qa@tripva.in", "Secret@1");
+
+const searchPage = new SearchPage();
+searchPage.open();
+searchPage.search("Chennai", "Madurai");
