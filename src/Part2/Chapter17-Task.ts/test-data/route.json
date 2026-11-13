@@ -1,0 +1,13 @@
+[
+    { 
+        "from": "Chennai", 
+        "to": "Trichy",
+        "fare": 500
+    },
+
+    {
+        "from": "Chennai",
+        "to": "Bangaluru",
+        "fare": 700
+    }
+]
