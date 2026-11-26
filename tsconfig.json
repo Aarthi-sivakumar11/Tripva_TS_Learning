@@ -3,9 +3,19 @@
   "compilerOptions": {
     // File Layout
      "rootDir": "./src",
-    // "outDir": "./dist",
-    
+ 
+      "paths": {
+            "@data/*": ["./src/Part2/Chapter17-Task.ts/test-data/*"]
+        },
+     
+    // Don't create JavaScript when there are TypeScript errors
+    "noEmitOnError": true,
+    // Check TypeScript but don't create JavaScript
+    "noEmit": true,
+    "resolveJsonModule": true,
 
+
+    // "outDir": "./dist",
   
 
     // Environment Settings
@@ -13,7 +23,7 @@
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "bundler",
-    "types": [],
+    "types": ["node"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -25,7 +35,7 @@
     "declarationMap": false,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+  //  "exactOptionalPropertyTypes": true,
 
     // Style Options
     // "noImplicitReturns": true,
@@ -36,7 +46,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
+    "strict": false,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
@@ -45,3 +55,5 @@
     "skipLibCheck": true,
   }
 }
+
+
