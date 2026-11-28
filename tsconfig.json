@@ -13,6 +13,7 @@
     // Check TypeScript but don't create JavaScript
     "noEmit": true,
     "resolveJsonModule": true,
+    "esModuleInterop": true,
 
 
     // "outDir": "./dist",

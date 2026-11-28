@@ -12,8 +12,12 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
     "@types/node": "^26.6.10",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10"
   }
 }

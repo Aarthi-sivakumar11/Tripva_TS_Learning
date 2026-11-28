@@ -1,0 +1,8 @@
+
+from,to,daysAhead,expectedResult
+Chennai,Bengaluru,1,Available
+Chennai,Madurai,3,Available
+Chennai,Coimbatore,5,Available
+Chennai,Salem,10,Available
+Chennai,Hyderabad,15,Available
+Chennai,Pondicherry,20,Sold Out

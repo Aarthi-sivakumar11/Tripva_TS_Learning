@@ -1,0 +1,17 @@
+[
+    {
+        "name": "AARTHI",
+        "email": "aarthisiva@test.com",
+        "role": "tester"
+    },
+    {
+        "name": "ASHWINI",
+        "email": "ashwinisiva@test.com",
+        "role": "user"
+    },
+    {
+        "name": "ASHOK",
+        "email": "ashoksiva@test.com",
+        "role": "admin"
+    }
+]
